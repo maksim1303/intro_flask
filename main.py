@@ -20,8 +20,8 @@ def contact():
 def params():
   return request.args
 
-@app.route('/post_req', methods = ['POST'])
-def post_req():
+@app.route('/post', methods = ['POST'])
+def post:
   return request.args
 
 if __name__ == '__main__':
