@@ -21,7 +21,7 @@ def params():
   return request.args
 
 @app.route('/post', methods = ['POST'])
-def post:
+def post():
   return request.args
 
 if __name__ == '__main__':
