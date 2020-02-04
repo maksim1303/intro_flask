@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+from file_proc import read_file
 app = Flask(__name__)
 
 @app.route("/")
@@ -24,5 +24,9 @@ def params():
 def post():
   return request.args
 
+@app.route('/read_file')
+def read_from_file():
+  content = read_file()
+  return content
 if __name__ == '__main__':
   app.run(host="0.0.0.0", threaded=True, port=5000, debug=True)
